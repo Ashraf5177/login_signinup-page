@@ -39,8 +39,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-   user: 'mayankrawat7963@gmail.com',
-   pass: 'qlmn ebml zunv qcow',
+   user: 'your_gmail@gmail.com',
+   pass: 'password',
   },
  });
 
@@ -86,7 +86,7 @@ app.post("/login", async function (req, res) {
             const otp = randomstring.generate({ length: 6, charset: "numeric" });
 
             const mailOptions = {
-                from: "mayankrawat7963@gmail.com", // Replace with your email address
+                from: "your_gmail@gmail.com", // Replace with your email address
                 to: user.username, // Assuming the username is the email
                 subject: "Your OTP for Verification",
                 text: `Your OTP is: ${otp}`,
