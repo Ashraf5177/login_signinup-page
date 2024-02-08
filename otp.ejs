@@ -1,0 +1,9 @@
+<!-- Filename - otp.ejs -->
+
+<h1>Enter OTP</h1>
+
+<form action="/otp-verify" method="POST">
+    <input type="hidden" name="username" value="<%= username %>">
+    <input type="text" name="otp" placeholder="Enter OTP">
+    <button type="submit">Verify OTP</button>
+</form>
